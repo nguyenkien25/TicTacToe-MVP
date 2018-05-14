@@ -21,6 +21,10 @@ This is essentially the controller from MVC except that it is not at all tied to
 This addresses the testability concerns as well as the modularity/flexibility concerns we had with MVC.
 *In fact, MVP purists would argue that the presenter should never have any references to any Android APIs or code.*
 
+View ([tictactoe.xml](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/res/layout/tictactoe.xml) [menu_tictactoe.xml](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/res/menu/menu_tictactoe.xml) [TicTacToeActivity](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/view/TicTacToeActivity.java) [TicTacToeView <interface>](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/view/TicTacToeView.java))
+---Notify , Ask View to Setup Itself --> Presenter ([Presenter <Interface>](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/presenter/Presenter.java) [TicTacToePresenter](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/presenter/TicTacToePresenter.java))
+---Interact with--> Model ([Board](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/model/Board.java) [Cell](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/model/Cell.java) [Player](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/model/Player.java))
+
 Looking at the [TicTacToePresenter](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/presenter/TicTacToePresenter.java) in more detail below, the first thing you’ll notice is how much simpler and clearer the intent of each action is.
 Rather than telling the view how to display something, it just tells it what to display.
 

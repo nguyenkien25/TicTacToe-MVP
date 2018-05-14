@@ -20,6 +20,10 @@ Good practice là có Activity thực hiện một giao diện interface sao cho
 Việc này nêu lên những quan ngại khả năng kiểm thử cũng như các mối quan tâm của modularity/flexibility, chúng ta đã có với MVC.
 *Trong thực tế, MVP chủ nghĩa thuần túy sẽ tranh luận rằng presenter không bao giờ nên có bất kỳ reference cho bất kỳ API Android hoặc code.*
 
+View ([tictactoe.xml](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/res/layout/tictactoe.xml) [menu_tictactoe.xml](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/res/menu/menu_tictactoe.xml) [TicTacToeActivity](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/view/TicTacToeActivity.java) [TicTacToeView <interface>](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/view/TicTacToeView.java))
+---Notify , Ask View to Setup Itself --> Presenter ([Presenter <Interface>](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/presenter/Presenter.java) [TicTacToePresenter](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/presenter/TicTacToePresenter.java))
+---Interact with--> Model ([Board](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/model/Board.java) [Cell](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/model/Cell.java) [Player](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/model/Player.java))
+
 Nhìn vào Presenter chi tiết trong file [TicTacToePresenter](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/presenter/TicTacToePresenter.java), điều đầu tiên bạn sẽ nhận thấy là cách đơn giản hơn nhiều và rõ ràng hơn trong intent của mỗi action.
 Thay vì nói với view làm thế nào để hiển thị một cái gì đó, nó chỉ nói cho view những gì để hiển thị.
 
