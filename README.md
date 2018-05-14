@@ -30,7 +30,7 @@ In a test, we’ll create a mock based on this interface to test interactions wi
 ## Evaluation
 
 This is much cleaner.
-We can easily unit test the presenter logic because it’s not tied to any Android specific views and APIs and that also allows us to work with any other view as long as the view implements the TicTacToeView interface.
+We can easily unit test the presenter logic because it’s not tied to any Android specific views and APIs and that also allows us to work with any other view as long as the view implements the [TicTacToeView](https://github.com/nguyenkien25/TicTacToe-MVP/blob/master/app/src/main/java/com/acme/tictactoe/view/TicTacToeView.java) interface.
 
 ## Presenter Concerns
 
